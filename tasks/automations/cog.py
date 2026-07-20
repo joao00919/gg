@@ -1,0 +1,38 @@
+import disnake
+from disnake.ext import commands
+
+AUTOMATION_TASKS = [
+    "tasks.automations.tsk_boas_vindas",
+    "tasks.automations.tsk_clean",
+    "tasks.automations.tsk_cont_members",
+    "tasks.automations.tsk_cont_members_call",
+    "tasks.automations.tsk_cont_vendas",
+    "tasks.automations.tsk_invite_tracker",
+    "tasks.automations.tsk_lock_unlock",
+    "tasks.automations.tsk_msg_auto",
+    "tasks.automations.tsk_reactions",
+    "tasks.automations.tsk_response_auto",
+    "tasks.automations.tsk_suggestions",
+    "tasks.automations.tsk_topics",
+    "tasks.automations.tsk_nuke",
+    "tasks.automations.tsk_repost",
+    "tasks.automations.close_tickets",
+    "tasks.automations.business_rules",
+]
+
+class AutomationTasksCog(commands.Cog):
+    def __init__(self, bot: commands.Bot):
+        self.bot = bot
+        for task_module in AUTOMATION_TASKS:
+            try:
+                self.bot.reload_extension(task_module)
+            except commands.ExtensionNotLoaded:
+                try:
+                    self.bot.load_extension(task_module)
+                except Exception as e:
+                    print(f"Falha ao carregar a tarefa de automação '{task_module}': {e}")
+            except Exception as e:
+                print(f"Falha ao recarregar a tarefa de automação '{task_module}': {e}")
+
+def setup(bot: commands.Bot):
+    bot.add_cog(AutomationTasksCog(bot))

@@ -1,0 +1,6 @@
+ZYNEX Bot de Vendas 4.3.17
+
+- DISCORD_CLIENT_ID deixou de ser obrigatório no .env.
+- O ID da aplicação é identificado automaticamente pelo BOT_TOKEN/DISCORD_TOKEN.
+- O valor ainda pode ser informado manualmente como fallback.
+- MAIN_GUILD_ID limita o funcionamento ao servidor licenciado.

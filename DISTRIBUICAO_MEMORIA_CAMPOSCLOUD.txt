@@ -1,0 +1,17 @@
+DISTRIBUIÇÃO RECOMENDADA — PLANO 4 GB (4096 MB)
+
+ZYNEX Manager:              768 MB
+MongoDB:                   1024 MB
+Bot de vendas:             1536 MB
+API de transcripts:         512 MB
+Folga operacional:          256 MB
+---------------------------------
+TOTAL:                     4096 MB
+
+CONFIGURAÇÃO DO BOT
+MEMORY=1536
+
+CONFIGURAÇÃO DA API DE TRANSCRIPT
+MEMORY=512
+
+A folga de 256 MB evita que pequenas oscilações de consumo deixem todas as aplicações no limite.

@@ -1,0 +1,44 @@
+ZENYX BOT DE VENDAS 4.3.18 — REFERÊNCIA DOS VÍDEOS
+=====================================================
+
+PACOTE COMPLETO
+- Interface administrativa reconstruída a partir dos cinco vídeos enviados.
+- Logo global: <:zenyx2:1527921690292785272>.
+- Catálogo local com os emojis personalizados informados.
+- /criar, produto, estoque, Config.Extra, configurações avançadas, painéis select,
+  carrinho, escolha de pagamento, PIX e edição de tickets revisados.
+
+INSTALAÇÃO LOCAL
+1. Extraia o ZIP em uma pasta nova.
+2. Execute INSTALAR_LOCAL.bat.
+3. Copie .env.example para .env.
+4. Preencha DISCORD_TOKEN, DISCORD_CLIENT_ID, MAIN_GUILD_ID e BOT_OWNER_IDS.
+5. Ative Server Members Intent e Message Content Intent no Developer Portal.
+6. Execute INICIAR_LOCAL.bat.
+
+IMPORTANTE SOBRE O TOKEN
+- O pacote não contém token do Discord.
+- "Improper token has been passed" significa que DISCORD_TOKEN está vazio,
+  expirado, redefinido ou não pertence ao bot.
+- Nunca envie o token em chat, print ou arquivo ZIP.
+
+EMOJIS PERSONALIZADOS
+- A aplicação proprietária dos IDs usa os emojis estáticos.
+- Em outra aplicação, mantenha SYNC_APPLICATION_EMOJIS=true para o bot criar
+  emojis com os mesmos nomes usando database/emojis/assets.
+- Para impedir qualquer upload, use DISABLE_APPLICATION_EMOJI_SYNC=true.
+
+FLUXO DO CARRINHO
+- Um produto: Ir para pagamento, Editar quantidade, Usar cupom de desconto e
+  Ler Termos e Condições.
+- Vários produtos: Ir para pagamento, select Gerenciar produtos no carrinho,
+  cupom e termos.
+- Pagamento: Pagar com Pix/Pagar com Cartão; depois Código copia e cola,
+  Atualizar status, Cancelar pagamento e Aprovar Pagamento no PIX Manual.
+
+VALIDAÇÃO INCLUÍDA
+- Execute VALIDAR_REFERENCIA_VIDEO.bat.
+- A validação confere os componentes observáveis dos vídeos e o diagnóstico local.
+- Credenciais e APIs reais precisam ser testadas no servidor do proprietário.
+
+Consulte MATRIZ_REFERENCIA_DOS_VIDEOS_4.3.18.md para a lista detalhada.

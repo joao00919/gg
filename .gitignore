@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+!.env.production.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+.pytest_cache/
+.mypy_cache/
+data/local_database.json
+database/payments/certs/
+database/backups/*
+!database/backups/.gitkeep
+
+backups/

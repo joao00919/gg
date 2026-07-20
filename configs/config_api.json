@@ -1,0 +1,5 @@
+{
+    "api": "localhost:22222",
+    "cloud": "http://localhost:8080",
+    "transcripts": "localhost:22222"
+}

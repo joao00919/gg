@@ -1,0 +1,7 @@
+{
+    "backup_auto_ativo": true,
+    "backup_auto_minutos": 360,
+    "backup_auto_exclude": [
+        "messages"
+    ]
+}

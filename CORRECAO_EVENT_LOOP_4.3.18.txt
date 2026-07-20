@@ -1,0 +1,10 @@
+ZYNEX BOT DE VENDAS 4.3.18
+
+CORREÇÃO
+- Corrigido RuntimeError: There is no current event loop in thread 'MainThread'.
+- O bot agora cria e registra o event loop antes de carregar as extensões e tasks.
+- Compatível com Python 3.12 e disnake 2.12.
+- Mantido DISCORD_CLIENT_ID automático pelo token.
+
+RESULTADO
+As extensões tasks.zynex_operations, automações, backup e proteção podem iniciar sem interromper o boot.

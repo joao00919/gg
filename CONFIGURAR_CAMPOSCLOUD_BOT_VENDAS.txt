@@ -1,0 +1,46 @@
+ZYNEX BOT DE VENDAS — CONFIGURAÇÃO NA CAMPOS CLOUD
+
+1. Crie uma aplicação do tipo Python.
+2. Envie o conteúdo desta pasta/ZIP com bot.py na raiz.
+3. Use o arquivo camposcloud.config incluído.
+4. Caso o painel peça os comandos manualmente:
+
+   Instalação:
+   pip install --no-cache-dir -r requirements.txt
+
+   Inicialização:
+   python -u bot.py
+
+5. Configure Python 3.11 e pelo menos 1024 MB de memória.
+6. Cadastre no painel as variáveis do arquivo .env.camposcloud.example.
+7. Não envie um .env preenchido dentro do ZIP.
+8. Ative no Discord Developer Portal:
+   - Server Members Intent
+   - Message Content Intent
+9. Para banco persistente, use MongoDB. Não dependa somente do JSON local.
+10. Para Manager/API privada, exponha a aplicação via web e deixe PRIVATE_API_PORT sem configurar; o bot usa PORT automaticamente.
+11. Para transcripts, mantenha TRANSCRIPT_API_URL e TRANSCRIPT_API_KEY iguais aos dados da aplicação separada de transcripts.
+
+TESTE DE INICIALIZAÇÃO
+
+Antes de conectar o bot ao Discord, você pode trocar temporariamente o STARTUP por:
+python -u bot.py --check
+
+Depois do diagnóstico, restaure:
+python -u bot.py
+
+ERROS COMUNS
+
+- Invalid token: DISCORD_TOKEN incorreto.
+- Application ID ausente: configure DISCORD_CLIENT_ID.
+- Mongo timeout: libere o IP 0.0.0.0/0 no MongoDB Atlas ou configure a rede corretamente.
+- Comandos não aparecem: confira MAIN_GUILD_ID/DISCORD_TEST_GUILD_ID e reinicie.
+- Transcript não gera link: confira TRANSCRIPT_API_URL e TRANSCRIPT_API_KEY.
+- Manager não conecta: confira SALES_BOT_API_KEY, MANAGER_API_URL e as chaves internas.
+
+DISTRIBUIÇÃO PARA PLANO DE 4 GB
+- Manager: 768 MB
+- MongoDB: 1024 MB
+- Bot de vendas: 1536 MB
+- API de transcripts: 512 MB
+- Folga: 256 MB

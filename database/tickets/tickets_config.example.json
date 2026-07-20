@@ -1,0 +1,38 @@
+{
+  "panels": {
+    "suporte-premium": {
+      "name": "Central de Atendimento Premium",
+      "ticket_mode": "mixed",
+      "mode": "channel",
+      "category_id": "ID_DA_CATEGORIA",
+      "roles": {
+        "attendant_roles": ["ID_DO_CARGO_DE_SUPORTE"]
+      },
+      "purchase_settings": {
+        "max_purchases": 25,
+        "warranty_days": 30,
+        "allow_without_purchase": true,
+        "show_delivery_items": true
+      },
+      "preferences": {
+        "require_reason": { "enabled": true },
+        "send_close_message": { "enabled": true },
+        "team_setup": {
+          "disabled_buttons": []
+        }
+      },
+      "messages": {
+        "assume_message": "🟢 {autor_mention} assumiu este atendimento.",
+        "transcript_dm_message": "🟢 Aqui está o transcript completo do ticket `{channel_name}`."
+      },
+      "open_message": {
+        "style": "embed",
+        "embed": {
+          "title": "Atendimento iniciado",
+          "description": "Descreva o que precisa e aguarde a equipe. Compras encontradas recebem prioridade automática.",
+          "color": "#191A1D"
+        }
+      }
+    }
+  }
+}

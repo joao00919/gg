@@ -1,0 +1,14 @@
+{
+    "websocket_cloud": {
+        "server_url": "http://localhost:8080",
+        "http_url": "http://localhost:8080",
+        "reconnect_interval": 5,
+        "auto_start": true,
+        "jwt_secret": ""
+    },
+    "websocket_manager": {
+        "server_url": "http://localhost:8080",
+        "reconnect_interval": 5,
+        "auto_start": true
+    }
+}
